@@ -6,6 +6,11 @@ if [ $arch == 8 ];then
 else
 	tool=mitool_arm
 fi
+
+if [ $(uname -m) == "mips" ];then
+	tool=mitool_mips
+fi
+
 if [ "$1" == "unlock" ];then
 	/tmp/$tool unlock
 elif [ "$1" == "hack" ];then
